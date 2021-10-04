@@ -51,7 +51,7 @@ public class EnderecoDAO extends ConexaoDAO {
         
         
         String sql = "SELECT ID_ENDERECO, ENDERECO, NUMERO, BAIRRO, COMPLEMENTO, "
-        		+ "CIDADE, UF, CEP, CLIENTE_ID_CLIENTE FROM ENDERECO";
+        		+ "CIDADE, UF, CEP, ID_CLIENTE FROM ENDERECO";
         
         try{
             pstm = criarPreparedStatement(sql);
@@ -66,7 +66,7 @@ public class EnderecoDAO extends ConexaoDAO {
                 enderecoModel.setCidade(resultSet.getString(5));
                 enderecoModel.setCep(resultSet.getString(6));
                 enderecoModel.setEstado(resultSet.getString(7));
-                enderecoModel.setCliente_id_cliente(resultSet.getInt(8));
+                enderecoModel.seId_cliente(resultSet.getInt(8));
         
                 listaEndereco.add(enderecoModel);
 

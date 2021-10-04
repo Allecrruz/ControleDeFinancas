@@ -8,7 +8,7 @@ public class EnderecoModel {
 	private String cidade;
 	private String cep;
 	private String estado;
-	private int cliente_id_cliente;
+	private int id_cliente;
 	
 	
 	
@@ -55,11 +55,11 @@ public class EnderecoModel {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	public int getCliente_id_cliente() {
-		return cliente_id_cliente;
+	public int getId_cliente() {
+		return id_cliente;
 	}
-	public void setCliente_id_cliente(int cliente_id_cliente) {
-		this.cliente_id_cliente = cliente_id_cliente;
+	public void seId_cliente(int id_cliente) {
+		this.id_cliente = id_cliente;
 	}
 	
 	
