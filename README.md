@@ -63,7 +63,7 @@ CREATE TABLE CLIENTE(
   Preenche campos status cliente para 'A = Ativo' e Data criação / alteração.
   declarando uma trigger.
      
-        CREATE OR REPLACE TRIGGER PREENCHE_CAMP_CLIENTE 
+ CREATE OR REPLACE TRIGGER PREENCHE_CAMP_CLIENTE 
 after INSERT on cliente
 DECLARE
     vid_cliente cliente.id %type;
