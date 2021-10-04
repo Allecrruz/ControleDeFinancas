@@ -1,6 +1,9 @@
 package Model;
 
+import javax.swing.JMenuItem;
+
 public class ClienteModel {
+	
 	//Declarar os Atributos da Classe Cliente
 	private int id;
 	private String nome;
@@ -12,7 +15,7 @@ public class ClienteModel {
 	private String razao_social;
 	private String email;
 	
-
+	
 	public int getId() {
 		return id;
 	}
@@ -68,6 +71,15 @@ public class ClienteModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	@Override
+	public String toString() {
+		return "Cliente nome=" + nome + ", \n cpf=" + cpf + ",\n cnpj=" + cnpj + ", \nconta=" + conta + ",\n sexo=" + sexo
+		+ ", phone=" + phone + ",\n razao_social=" + razao_social + ",\n email=" + email + ";";
+	}
+	
+	
+	
+		 
 	
 	
 	

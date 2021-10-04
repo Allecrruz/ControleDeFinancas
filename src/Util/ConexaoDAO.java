@@ -1,5 +1,6 @@
 package Util;
 import java.sql.*;
+import oracle.jdbc.driver.*;
 
 public class ConexaoDAO {
 	//Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -7,8 +8,9 @@ public class ConexaoDAO {
 	private Connection conexao;
     private String driver = "oracle.jdbc.OracleDriver";
     private String caminho = "jdbc:oracle:thin:@localhost:1521:XE";
-    private String senha = "123";
     private String Usuario = "Alessandro";
+    private String senha = "123";
+    
 	
 		
 	
@@ -54,15 +56,10 @@ public class ConexaoDAO {
     }
 
     
-    public PreparedStatement criarPreparedStatement(String pSQL, int RETURN_GENERATED_KEYS) {
-        try {
-            System.out.println("Executando");
-            return conexao.prepareStatement(pSQL, RETURN_GENERATED_KEYS);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            System.err.println(e.getMessage());
-            return null;
-        }
+    public PreparedStatement criarPreparedStatement(String pSQL, int RETURN_GENERATED_KEYS) throws SQLException {
+        System.out.println("Executando");
+         // return conexao.prepareStatement(pSQL, RETURN_GENERATED_KEYS);
+		return null;
     }
 
     public Connection getConexao() {

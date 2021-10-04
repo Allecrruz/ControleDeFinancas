@@ -8,6 +8,10 @@ public class ContaModel {
 	private String data_conta;
 	private double saldo;
 	private String conta;
+	private int qtdcontas =0;
+	private double total_receitas = 0;
+	private double  total_despesas = 0;
+	
 	
 	
 			
@@ -54,6 +58,37 @@ public class ContaModel {
 		this.conta = conta;
 	}
 	
+	public void DadosBancarios() {
+		/*System.out.println("");
+		System.out.println("--DADOS BANCÁRIOS--");
+		System.out.println("--NUMERO: "+this.numero);
+		System.out.println("--Titular"+this.titular);
+		System.out.println("--saldo "+ this.saldo);
+		System.out.println("");*/
+	}
+	public void depositar(double pvalor) {
+		System.out.println("");
+		//System.out.println("--DADOS BANCÁRIOS--");
+		//System.out.println("--: "+this.numero);
+		//System.out.println("--Titular"+this.titular);
+		System.out.println("--saldo anterior "+ this.saldo);
+		System.out.println("");
+		System.out.println("--saldo atual "+ this.saldo);
+		this.saldo+= pvalor;
+	}
+		
+	public void Sacar(double pValor) {
+		System.out.println("--saldo anterior "+ this.saldo);
+		if(pValor <= this.saldo) { // caso eu tenha saldo
+			this.saldo -= pValor;
+			System.out.println("--saldo atual "+ this.saldo); 
+			
+		}else {
+			System.out.println("saldo insuficiente");//caso seja insuficiente
+		}
+	}
 	
-
+		
+	
 }
+

@@ -2,6 +2,7 @@ package DAO;
 
 
 import java.util.logging.Level;
+import java.util.List;
 import java.util.logging.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +14,7 @@ import Util.ConexaoDAO;
 
 public class ClienteDAO extends ConexaoDAO {
 	
-	public boolean SaveCliente(ClienteModel cliente) {
+	public boolean SaveCliente(ClienteModel cliente) throws SQLException {
 		 conectar();
 		String sql = "INSERT INTO cliente (id,nome,cpf,cnpj,conta,sexo,phone,razao_social"
 				+ "email) VALUES (?,?,?,?,?,?,?,?,?)";
@@ -45,6 +46,11 @@ public class ClienteDAO extends ConexaoDAO {
 		
 		return false;
 		}
+
+	public List<ClienteModel> getListClienteDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 		
 	
 	} 
